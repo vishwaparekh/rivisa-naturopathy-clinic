@@ -3,9 +3,7 @@ const CLINIC_NAME = "Rivisa Naturopathy Clinic";
 const DOCTOR_NAME = "Dr. Rita Parekh, NDDY";
 const CITY = "Surat, Gujarat";
 const HOURS_TEXT = "Mon–Fri, 12:00 PM–5:00 PM (IST).";
-
-// WhatsApp number: digits only (no +)
-const WHATSAPP_NUMBER = "919374519723";
+const WHATSAPP_NUMBER = "919374519723"; // digits only
 
 // ====== Helpers ======
 function waLinkFromText(text) {
@@ -237,7 +235,7 @@ function askNameRequired() {
 
 function askPreferredTime() {
   state = "book_time";
-  addBubble(chatArea, "Any preferred day/time? (optional). Example: “Tue 2–4 PM”. Type below or Skip.");
+  addBubble(chatArea, "Any preferred day/time? (optional). Example: “Tue 2–4 PM”. Type below or tap Skip.");
   addChoices(chatArea, ["Skip"], (pick) => {
     booking.preferredTime = "(no preference)";
     addBubble(chatArea, pick, "user");
@@ -309,7 +307,6 @@ function handleFreeText(text) {
   addBubble(chatArea, "Please use the options above, or choose Book an appointment.", "bot");
 }
 
-// send handlers
 sendFreeText.addEventListener("click", () => {
   handleFreeText(freeText.value.trim());
   freeText.value = "";
