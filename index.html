@@ -4,66 +4,80 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rivisa Naturopathy Clinic | Dr. Rita Parekh, NDDY</title>
-  <meta name="description" content="Rivisa Naturopathy Clinic in Surat, Gujarat — Dr. Rita Parekh (NDDY). Personalized naturopathy care with online & in-clinic consultations." />
+  <meta name="description" content="Rivisa Naturopathy Clinic in Surat, Gujarat — Dr. Rita Parekh (NDDY). Hybrid naturopathy consultations." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <!-- Header + hamburger menu -->
   <header class="topbar">
     <div class="container topbar-inner">
-      <div class="brand">
-        <div class="brand-mark">R
-       
+      <a class="brand" href="index.html" aria-label="Rivisa Naturopathy Clinic">
+        <div class="brand-mark brand-logo">
+          <img src="assets/doctor.png" alt="Rivisa logo" />
         </div>
         <div>
           <div class="brand-name">Rivisa Naturopathy Clinic</div>
-          <div class="brand-sub">Dr. Rita Parekh, NDDY • Surat, Gujarat • Online + In-Clinic</div>
+          <div class="brand-sub">Dr. Rita Parekh, NDDY • Surat, Gujarat</div>
         </div>
-      </div>
+      </a>
 
-      <a class="btn btn-ghost hide-on-mobile" href="#book">Book</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
     </div>
+
+    <nav class="menu" id="menu" aria-label="Site menu">
+      <a href="#about">About</a>
+      <a href="#popular">Popular Questions</a>
+      <a href="#pillars">What We Treat</a>
+      <a href="#book">Book an Appointment</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
   <main>
-    <!-- HERO -->
+    <!-- Hero -->
     <section class="hero">
       <div class="container hero-grid">
-        <div>
-          <h1>Natural healing, personalized for your body & lifestyle.</h1>
+        <div class="hero-copy">
+          <div class="kicker">Naturopathy • Lifestyle • Sustainable Wellness</div>
+          <h1>Personalized naturopathy care for modern life.</h1>
           <p class="lead">
-            Consult Dr. Rita Parekh (NDDY) for a structured naturopathy plan focused on diet, lifestyle, and natural therapies —
-            available both <strong>online</strong> and <strong>in clinic</strong>.
+            Rivisa Naturopathy Clinic offers hybrid guidance with a practical, patient-first approach —
+            focused on diet, routine, sleep, stress, and long-term habits.
           </p>
 
           <div class="cta-row">
-            <a class="btn btn-primary" href="#book">Request a WhatsApp Call</a>
-            <a class="btn btn-secondary" href="#services">What we treat</a>
+            <a class="btn btn-primary" href="#book">Book an Appointment</a>
+            <a class="btn btn-secondary" href="#pillars">Explore what we treat</a>
           </div>
 
           <div class="trust-row">
-            <div class="pill">✅ Personalized plans</div>
-            <div class="pill">✅ Hybrid consultations</div>
-            <div class="pill">✅ Practical, sustainable changes</div>
+            <div class="pill">Mon–Fri • 12–5 PM (IST)</div>
+            <div class="pill">Online + In-clinic</div>
+            <div class="pill">Structured follow-ups</div>
           </div>
         </div>
 
-        <div class="hero-card">
-          <div class="hero-card-inner">
-            <div class="mini-title">Quick Assistant</div>
-            <div class="mini-text">Learn about naturopathy or request a WhatsApp call in under a minute.</div>
-            <button id="openChatbot" class="btn btn-primary btn-full">Open Assistant</button>
-            <div class="mini-footnote">No spam. Message goes directly to the clinic WhatsApp.</div>
+        <div class="hero-visual">
+          <div class="hero-photo">
+            <img src="assets/doctor.png" alt="Dr. Rita Parekh" />
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-inner">
+              <div class="mini-title">Have a quick question?</div>
+              <div class="mini-text">Tap the chat button to learn about naturopathy or request an appointment via WhatsApp.</div>
+              <div class="mini-footnote">No spam. You choose what to send.</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- POPULAR QUESTIONS -->
-    <section class="section">
+    <!-- Popular questions -->
+    <section id="popular" class="section soft">
       <div class="container">
         <h2>Popular questions</h2>
-        <p class="muted">Tap a question to open the assistant and get quick answers.</p>
+        <p class="muted">Tap a question — the assistant will answer instantly.</p>
 
         <div class="grid popular">
           <button class="card popq" data-q="What is naturopathy?">What is naturopathy?</button>
@@ -71,141 +85,120 @@
           <button class="card popq" data-q="What happens in a first consultation?">What happens in a first consultation?</button>
           <button class="card popq" data-q="Is naturopathy safe?">Is naturopathy safe?</button>
         </div>
-
-        <div style="margin-top:10px;">
-          <button id="openLearn" class="btn btn-secondary btn-full">Explore more questions</button>
-        </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="section soft">
+    <!-- Pillars -->
+    <section id="pillars" class="section">
       <div class="container">
-        <h2>What we help with</h2>
-        <p class="muted">Common reasons patients consult us (online or in-clinic):</p>
+        <h2>What we treat</h2>
+        <p class="muted">Five focus areas we commonly support through lifestyle and naturopathy-based care.</p>
 
-        <div class="grid cards">
-          <div class="card">Diabetes & metabolic health support</div>
-          <div class="card">Lifestyle disorders & weight management</div>
-          <div class="card">Digestive health (acidity, gas, bloating, constipation)</div>
-          <div class="card">Stress, sleep & mental fatigue</div>
-          <div class="card">Joint pain & chronic body pain support</div>
-          <div class="card">General lifestyle improvement & wellness plans</div>
-        </div>
+        <div class="grid pillars">
+          <a class="pillar-card" href="pillars/diabetes.html">
+            <div class="pillar-title">Diabetes & Metabolic Health</div>
+            <div class="pillar-sub">Habits, routine, and structured support</div>
+          </a>
 
-        <p class="note">
-          Not sure what applies to you? Use the <strong>Assistant</strong> to explore FAQs or request a WhatsApp call.
-        </p>
-      </div>
-    </section>
+          <a class="pillar-card" href="pillars/lifestyle.html">
+            <div class="pillar-title">Lifestyle & Weight Management</div>
+            <div class="pillar-sub">Sustainable routines, not quick fixes</div>
+          </a>
 
-    <!-- HOW IT WORKS -->
-    <section class="section">
-      <div class="container">
-        <h2>How consultations work</h2>
-        <div class="grid steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div>
-              <div class="step-title">Share your concern</div>
-              <div class="muted">Use the assistant or WhatsApp message.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <div>
-              <div class="step-title">WhatsApp call & plan</div>
-              <div class="muted">Short call to understand history and outline next steps.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <div>
-              <div class="step-title">Follow-ups</div>
-              <div class="muted">Adjustments based on progress — sustainability first.</div>
-            </div>
-          </div>
-        </div>
+          <a class="pillar-card" href="pillars/digestive.html">
+            <div class="pillar-title">Acidity & Digestive Health</div>
+            <div class="pillar-sub">Bloating, gas, constipation, gut comfort</div>
+          </a>
 
-        <div class="contact-box" style="margin-top:12px;">
-          <div><strong>Availability:</strong> Mon–Fri, 12:00 PM–5:00 PM (IST)</div>
-          <div><strong>Scheduling:</strong> 30-minute slots with 15-minute buffer</div>
+          <a class="pillar-card" href="pillars/stress-sleep.html">
+            <div class="pillar-title">Stress & Sleep</div>
+            <div class="pillar-sub">Better sleep, calmer mind, daily energy</div>
+          </a>
+
+          <a class="pillar-card" href="pillars/joint-pain.html">
+            <div class="pillar-title">Joint & Body Pain</div>
+            <div class="pillar-sub">Stiffness and chronic discomfort support</div>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- About -->
     <section id="about" class="section soft">
       <div class="container about-grid">
         <div class="about-card">
-          <div class="about-photo" aria-label="Doctor photo placeholder">
-            <!-- Optional: replace with <img src="assets/doctor.jpg" alt="Dr. Rita Parekh" /> -->
-            <div class="photo-placeholder">Optional photo: assets/doctor.jpg</div>
+          <div class="about-photo">
+            <img src="assets/doctor.png" alt="Dr. Rita Parekh" />
           </div>
         </div>
 
         <div>
-          <h2>Meet Dr. Rita Parekh (NDDY)</h2>
-          <p>
-            Dr. Rita Parekh provides naturopathy care with a practical, patient-first approach —
-            blending traditional principles with realistic lifestyle guidance for modern routines.
-          </p>
+          <h2>About Dr. Rita Parekh (NDDY)</h2>
           <p class="muted">
-            (We can refine this bio with experience, special training, and a short “approach statement”.)
+            Dr. Rita Parekh provides naturopathy care with a calm, structured approach —
+            focusing on realistic changes that fit your routine and are sustainable long-term.
           </p>
+
+          <div class="about-highlights">
+            <div class="highlight">Hybrid consultations (online + in-clinic)</div>
+            <div class="highlight">Personalized routine and diet guidance</div>
+            <div class="highlight">Follow-ups to track progress</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- BOOK -->
+    <!-- Book -->
     <section id="book" class="section">
       <div class="container">
-        <h2>Request a WhatsApp call</h2>
+        <h2>Book an appointment</h2>
         <p class="muted">
-          Use the Assistant to share your concern and phone number. WhatsApp will open with a pre-filled message —
-          please tap <strong>Send</strong> to submit your request.
+          Tap the chat button to book via WhatsApp. The assistant will collect key details and open WhatsApp with a short message.
+          Please tap <strong>Send</strong> to confirm.
         </p>
 
-        <div class="grid book-grid">
-          <div class="card book-card">
-            <div class="mini-title">Recommended</div>
-            <button id="openChatbot2" class="btn btn-primary btn-full">Open Assistant (Book)</button>
-            <div class="mini-footnote">Collects your details → prepares a perfect WhatsApp call request.</div>
-          </div>
-
-          <div class="card book-card">
-            <div class="mini-title">Direct WhatsApp</div>
-            <a id="waDirect" class="btn btn-secondary btn-full" href="#">Open WhatsApp Template</a>
-            <div class="mini-footnote">Opens WhatsApp with a short template message.</div>
-          </div>
-        </div>
-
         <div class="contact-box">
+          <div><strong>Hours:</strong> Mon–Fri, 12:00 PM–5:00 PM (IST)</div>
+          <div><strong>Slots:</strong> 30 minutes + 15 minutes buffer</div>
+          <div><strong>City:</strong> Surat, Gujarat</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section soft">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-box">
+          <div><strong>WhatsApp:</strong> +91 93745 19723</div>
+          <div><strong>Hours:</strong> Mon–Fri, 12:00 PM–5:00 PM (IST)</div>
           <div><strong>Location:</strong> Surat, Gujarat</div>
-          <div><strong>Hours:</strong> Mon–Fri, 12:00 PM–5:00 PM</div>
-          <div class="muted small" style="margin-top:8px;">
-            Disclaimer: Information on this website is for general guidance and does not replace medical advice.
-            For personal recommendations, please request a consultation.
+          <div class="muted small" style="margin-top:10px;">
+            Disclaimer: This website provides general information and does not replace medical advice.
+            For urgent symptoms, seek immediate care.
           </div>
         </div>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="container muted small">
+        © <span id="year"></span> Rivisa Naturopathy Clinic • Surat, Gujarat
+      </div>
+    </footer>
   </main>
 
-  <!-- Sticky bottom bar (mobile-first) -->
-  <nav class="bottom-bar">
-    <a id="waBtn" class="bottom-btn primary" href="#">Book WhatsApp Call</a>
-    <a id="callBtn" class="bottom-btn" href="#">Call</a>
-  </nav>
+  <!-- Floating chat button -->
+  <button class="chat-fab" id="chatFab" aria-label="Chat with Rivisa Assistant">💬</button>
 
-  <!-- Chatbot Modal -->
+  <!-- Chatbot modal -->
   <div id="chatbotModal" class="modal" aria-hidden="true">
     <div class="modal-backdrop" id="closeChatbot"></div>
     <div class="modal-sheet" role="dialog" aria-modal="true" aria-label="Assistant">
       <div class="modal-header">
         <div>
-          <div class="modal-title">Assistant</div>
-          <div class="muted small">Rivisa Naturopathy Clinic</div>
+          <div class="modal-title">Rivisa Assistant</div>
+          <div class="muted small">Learn • Book via WhatsApp</div>
         </div>
         <button class="icon-btn" id="closeChatbotX" aria-label="Close">✕</button>
       </div>
@@ -213,12 +206,15 @@
       <div id="chatArea" class="chat-area"></div>
 
       <div class="chat-input">
-        <input id="freeText" type="text" placeholder="Type here when asked (e.g., phone number)..." />
+        <input id="freeText" type="text" placeholder="Type here when asked (e.g., your name)..." />
         <button id="sendFreeText" class="btn btn-ghost">Send</button>
       </div>
     </div>
   </div>
 
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
   <script src="chatbot.js"></script>
 </body>
 </html>
