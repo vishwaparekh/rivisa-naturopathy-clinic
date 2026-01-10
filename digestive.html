@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acidity & Digestive Health | Rivisa Naturopathy Clinic</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <div class="brand-mark brand-logo"><img src="assets/doctor.png" alt="Rivisa logo"></div>
+        <div>
+          <div class="brand-name">Rivisa Naturopathy Clinic</div>
+          <div class="brand-sub">Dr. Rita Parekh, NDDY • Surat, Gujarat</div>
+        </div>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+    <nav class="menu" id="menu">
+      <a href="index.html#about">About</a>
+      <a href="index.html#popular">Popular Questions</a>
+      <a href="index.html#pillars">What We Treat</a>
+      <a href="index.html#book">Book an Appointment</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container content">
+        <p class="crumb"><a href="index.html">Home</a> / What we treat / Digestive</p>
+        <h1 class="page-title">Acidity & Digestive Health</h1>
+        <p class="lead">Support for acidity, bloating, gas, constipation, and digestion comfort through routine and dietary guidance.</p>
+
+        <h2>Common triggers</h2>
+        <ul>
+          <li>Irregular meals, late dinners</li>
+          <li>Spicy/fried foods, excess tea/coffee</li>
+          <li>Low hydration</li>
+          <li>Stress and poor sleep</li>
+        </ul>
+
+        <h2>How naturopathy may help (supportively)</h2>
+        <ul>
+          <li>Meal timing and food choices tailored to you</li>
+          <li>Hydration and daily routine improvements</li>
+          <li>Stress and sleep support</li>
+          <li>Follow-ups to adjust based on response</li>
+        </ul>
+
+        <div class="contact-box">
+          <div><strong>Need guidance?</strong></div>
+          <div class="muted">Tap the chat button to book via WhatsApp (Mon–Fri, 12–5 PM).</div>
+        </div>
+
+        <p class="muted small" style="margin-top:12px;">
+          Note: This page is general information and does not replace medical advice.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container muted small">© <span id="year"></span> Rivisa Naturopathy Clinic</div>
+    </footer>
+  </main>
+
+  <button class="chat-fab" id="chatFab" aria-label="Chat with Rivisa Assistant">💬</button>
+
+  <div id="chatbotModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="closeChatbot"></div>
+    <div class="modal-sheet" role="dialog" aria-modal="true" aria-label="Assistant">
+      <div class="modal-header">
+        <div>
+          <div class="modal-title">Rivisa Assistant</div>
+          <div class="muted small">Learn • Book via WhatsApp</div>
+        </div>
+        <button class="icon-btn" id="closeChatbotX" aria-label="Close">✕</button>
+      </div>
+      <div id="chatArea" class="chat-area"></div>
+      <div class="chat-input">
+        <input id="freeText" type="text" placeholder="Type here when asked (e.g., your name)..." />
+        <button id="sendFreeText" class="btn btn-ghost">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="chatbot.js"></script>
+</body>
+</html>
