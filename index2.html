@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rivisa Naturopathy Clinic | Dr. Rita Parekh</title>
+  <title>Rivisa Naturopathy Clinic</title>
 
   <style>
     body {
@@ -11,11 +11,11 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
       background: #ffffff;
       color: #111;
-      line-height: 1.5;
+      text-align: center;
     }
 
     .container {
-      width: min(720px, 92%);
+      width: min(760px, 92%);
       margin: auto;
     }
 
@@ -23,24 +23,10 @@
       padding: 32px 0;
     }
 
-    h1 {
-      font-size: 34px;
-      margin: 0 0 12px;
-    }
+    h1 { font-size: 34px; margin-bottom: 12px; }
+    h2 { font-size: 24px; margin-bottom: 10px; }
 
-    h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #555;
-    }
-
-    .hero {
-      padding: 40px 0 20px;
-      text-align: center;
-    }
+    p { color: #555; }
 
     .highlight {
       background: #f4f7f4;
@@ -50,19 +36,49 @@
       font-weight: 600;
     }
 
-    .pillars {
-      display: grid;
-      gap: 12px;
-      margin-top: 16px;
+    /* HUB & SPOKE */
+    .hub-container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 40px auto;
     }
 
-    .pillar {
-      border: 1px solid #ddd;
-      padding: 16px;
-      border-radius: 14px;
-      background: #fafafa;
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: #1f6f4a;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      padding: 12px;
     }
 
+    .node {
+      position: absolute;
+      width: 120px;
+      padding: 10px;
+      border-radius: 12px;
+      background: #f4f7f4;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* Positioning nodes */
+    .n1 { top: -10px; left: 90px; }
+    .n2 { top: 40px; left: -20px; }
+    .n3 { top: 40px; right: -20px; }
+    .n4 { bottom: 40px; left: -20px; }
+    .n5 { bottom: 40px; right: -20px; }
+
+    /* CTA */
     .cta {
       background: #1f6f4a;
       color: white;
@@ -71,15 +87,34 @@
       border-radius: 14px;
       text-decoration: none;
       display: block;
-      margin-top: 16px;
+      margin-top: 20px;
       font-weight: bold;
     }
 
     .footer {
       font-size: 12px;
       color: #777;
-      text-align: center;
       padding: 20px;
+    }
+
+    /* Mobile fallback */
+    @media (max-width: 600px) {
+      .hub-container {
+        width: auto;
+        height: auto;
+      }
+
+      .center {
+        position: static;
+        transform: none;
+        margin: 0 auto 16px;
+      }
+
+      .node {
+        position: static;
+        margin: 8px auto;
+        width: 90%;
+      }
     }
   </style>
 </head>
@@ -87,84 +122,65 @@
 <body>
 
   <!-- HERO -->
-  <section class="hero container">
+  <section class="section container">
     <h1>Food is the foundation of your health.</h1>
     <p>
-      At Rivisa Naturopathy Clinic, we focus on one core belief:
+      At Rivisa Naturopathy Clinic, we believe:
       <strong>Right diet + right routine can transform your health.</strong>
     </p>
 
     <div class="highlight">
-      We don’t give complicated plans — we help you build a way of living that works for you.
+      We help you fix your lifestyle in a simple, practical, and sustainable way.
     </div>
   </section>
 
-  <!-- PHILOSOPHY -->
+  <!-- HUB & SPOKE -->
+  <section class="section container">
+    <h2>How it works</h2>
+
+    <div class="hub-container">
+
+      <div class="center">
+        Diet &<br> Naturopathy
+      </div>
+
+      <div class="node n1">Diabetes</div>
+      <div class="node n2">Weight / Obesity</div>
+      <div class="node n3">Acidity & Digestion</div>
+      <div class="node n4">Stress & Sleep</div>
+      <div class="node n5">Joint Pain</div>
+
+    </div>
+
+    <p>
+      By improving your diet and daily routine, we help your body naturally
+      move towards balance and better health.
+    </p>
+  </section>
+
+  <!-- APPROACH -->
   <section class="section container">
     <h2>Our Approach</h2>
-    <p>
-      Most chronic conditions are not random — they develop over time through daily habits.
-      Food, sleep, stress, and routine shape your body every day.
-    </p>
 
-    <p>
-      Instead of quick fixes, we focus on:
-    </p>
-
-    <div class="highlight">✔ Understanding your daily routine</div>
-    <div class="highlight">✔ Fixing diet in a practical way</div>
-    <div class="highlight">✔ Creating sustainable habits</div>
-  </section>
-
-  <!-- CONDITIONS -->
-  <section class="section container">
-    <h2>What we help with</h2>
-
-    <div class="pillars">
-      <div class="pillar">
-        <strong>Diabetes</strong><br>
-        Improve metabolic health through structured diet and routine
-      </div>
-
-      <div class="pillar">
-        <strong>Weight / Obesity</strong><br>
-        Sustainable weight management without extreme diets
-      </div>
-
-      <div class="pillar">
-        <strong>Acidity & Digestion</strong><br>
-        Reduce bloating, gas, and digestive discomfort
-      </div>
-
-      <div class="pillar">
-        <strong>Stress & Sleep</strong><br>
-        Improve sleep quality and reduce mental fatigue
-      </div>
-
-      <div class="pillar">
-        <strong>Joint / Body Pain</strong><br>
-        Support recovery through lifestyle and diet
-      </div>
-    </div>
+    <div class="highlight">✔ Understand your routine</div>
+    <div class="highlight">✔ Fix diet step by step</div>
+    <div class="highlight">✔ Build sustainable habits</div>
   </section>
 
   <!-- DOCTOR -->
   <section class="section container">
     <h2>About</h2>
-    <p>
-      <strong>Dr. Rita Parekh (NDDY)</strong><br>
-      Naturopathy Doctor
-    </p>
+
+    <p><strong>Dr. Rita Parekh (NDDY)</strong></p>
 
     <p>
-      Focused on simple, practical, and sustainable health solutions
-      tailored to your lifestyle.
+      Focused on simple, practical, and sustainable naturopathy care.
     </p>
 
     <div class="highlight">
       📍 Surat, Gujarat<br>
       🕒 Mon–Fri, 12–5 PM<br>
-      💻 Online + In-person consultations
+      💻 Online + In-person
     </div>
   </section>
 
@@ -172,12 +188,8 @@
   <section class="section container">
     <h2>Start your journey</h2>
 
-    <p>
-      If you’re ready to take control of your health,
-      we’ll guide you step by step.
-    </p>
-
-    <a class="cta" href="https://wa.me/919374519723?text=Hello%20Rivisa%20Naturopathy%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment.">
+    <a class="cta"
+      href="https://wa.me/919374519723?text=Hello%20Rivisa%20Naturopathy%20Clinic%2C%20I%20would%20like%20to%20book%20an%20appointment.">
       Book via WhatsApp
     </a>
   </section>
